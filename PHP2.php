@@ -29,9 +29,24 @@
         echo "Lahutamine = $lah tehe ($m1 - $m2)<br>";
         echo "Korrutamine = $kor tehe ($m1 * $m2)<br>";
         echo "Jagamine = $jag tehe ($m1 / $m2)<br>";
-        echo "Jääk = $jaak tehe ($m1 % $m2)<br>";
+        echo "Jääk = $jaak tehe ($m1 % $m2)<br><br>";
         
         $mm = 100;
+        $cm = $mm / 10;
+        $m = $mm / 1000;
+        printf("%.2f mm on %.2f cm või %.2f m<br><br>", $mm, $cm, $m);
+
+        $a = 3;
+        $b = 4;
+        $c = 5;
+        $p = $a + $b + $c;
+        $s = ($a * $b) / 2;
+
+        printf("Kolmnurga ümbermõõt on %d ja pindala on %d<br><br>", $p, $s);
+
+
+
+
 
 
 
