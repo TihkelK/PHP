@@ -10,26 +10,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Harjutus 1</h1>   
+        <h1>Harjutus 5</h1>
+
+        
+
 
         <?php
         /*
         // Ülesanne 1
         // Mihkel Kuusemäe
-        // 01.01.24
+        // 05.02.24
         */
 
-        $nimi = "Mihkel";
-        $synniaasta = 2006;
-        $tahtkuju = "libra";
-
-        echo "Minu nimi on $nimi.<br>Sünniaasta - $synniaasta<br>Tähemärk - $tahtkuju <br><br>";
-
-        echo "\"It's My Life\" – Dr. Alban<br><br>";
-
-        echo "(\(\ <br>";
-        echo "( -.-) <br>";
-        echo "o_(\")(\") <br>";
+        $tydrukud = array('Aadu','Beedu','Ceedu','Deedu','Eedu','Feedu','Geedu','Heedu')
+        
+        var_dump($tydrukud)
 
 
 
