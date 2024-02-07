@@ -35,7 +35,7 @@
         */
 
        
-        if(!empty($_GET[''])){
+        if(!empty($_GET['arv1']) && !empty($_GET['arv2'])){
             $arv1 = $_GET['arv1'];
             $arv2 = $_GET['arv2'];
             $jaga = $arv1 / $arv2;
@@ -48,13 +48,13 @@
         
         <form action="#" method="get">
             <label for="vanus1">Vanus 1</label>
-            <input type="number" name="Vanus1" id="Vanus1"><br>
+            <input type="number" name="vanus1" id="vanus1"><br>
             <label for="vanus2">Vanus 2</label>
-            <input type="number" name="Vanus2" id="Vanus2"><br>
+            <input type="number" name="vanus2" id="vanus2"><br>
             <input type="submit" class="btn btn-success my-2" value="Leia vanus">
         </form>
         <?php
-        if(!empty($_GET['vanus'])){
+        if(!empty($_GET['vanus1']) && !empty($_GET['vanus1'])){
             $v1 = $_GET['vanus1'];
             $v2 = $_GET['vanus2'];
 
@@ -76,24 +76,44 @@
             <input type="number" name="kylg1" id="kylg1"><br>
             <label for="kylg2">Külg 2</label>
             <input type="number" name="kylg2" id="kylg2"><br>
-            <input type="submit" class="btn btn-success my-2" value="Leia vanus">
+            <input type="submit" class="btn btn-success my-2" value="Ristkülik/Ruut">
         </form>
         <?php
-        if(!empty($_GET['kylg'])){
-            $v1 = $_GET['vanus1'];
-            $v2 = $_GET['vanus2'];
+        if(!empty($_GET['kylg1']) && !empty($_GET['kylg2'])){
+            $k1 = $_GET['kylg1'];
+            $k2 = $_GET['kylg2'];
 
-            if ($v1 > $v2){
-                echo "$v1 on vanem kui $v2";
+            if ($k1 == $k2){
+                echo "Ruut";
             }
-            elseif ($v1 < $v2){
-                echo "$v2 on vanem kui $v1";
-            }
-            else "SISESTA VANUSED!";
+            else echo "Ristkülik";
         }
         ?>
 
         <h2>Ristkülik või ruut II</h2>
+
+        <form action="#" method="get">
+            <label for="kylg11">Külg 1</label>
+            <input type="number" name="kylg11" id="kylg11"><br>
+            <label for="kylg22">Külg 2</label>
+            <input type="number" name="kylg22" id="kylg22"><br>
+            <input type="submit" class="btn btn-success my-2" value="Ristkülik/Ruut">
+        </form>
+        <?php
+        if(!empty($_GET['kylg11']) && !empty($_GET['kylg22'])){
+            $k11 = $_GET['kylg11'];
+            $k22 = $_GET['kylg22'];
+
+            if ($k11 == $k22){
+                echo "Ruut";
+                echo "<img src=\"https://lh3.googleusercontent.com/proxy/zW7z7ntNN_ZMi3_cYBx7UBz21G92Xf0DjyegWxDgU7jVReANd5KRMwOJi522vKwfp9jZLnNmSy5zVpZsSmvonSZ4TQvP_3Q\">";
+            }
+            else{
+                echo "Ristkülik";
+                echo "<img src=\"https://lh3.googleusercontent.com/proxy/KbwkIdnmAMPHRC1dnyiNZ47jxm9y5s8iUZWMbN4Mlk5kA5ttdO-WkMZ1RDhz5VIPGq1I-Twq7M9bt__rfDLPz09Bsjk9OsQ\">";
+            }
+        }
+        ?>
 
         <h2>Juubel</h2>
 
