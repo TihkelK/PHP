@@ -83,16 +83,118 @@
             }
         }
         ?>
+
         <h2>Keskimised palgad</h2>
+
         <?php
         $palgad = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455);
         $sum = array_sum($palgad);
         $keskmine = $sum / count($palgad);
         echo "2018 palkade keskmine: ".$keskmine;
         ?>
-        <h2>Firmad</h2>
-        <?php
 
+        <h2>Firmad</h2>
+
+        <form action="#" method="get">
+            <label for="nimi">Firma nimi</label>
+            <input type="text" name="nimi" id="nimi"><br>
+            <input type="submit" class="btn btn-success my-2" value="Eemalda firma">
+        </form>
+
+        <?php
+        $firmad = array("Kimia","Mynte","Voomm","Twiyo","Layo","Talane","Gigashots","Tagchat","Quaxo","Voonyx","Kwilith","Edgepulse","Eidel","Eadel","Jaloo","Oyope","Jamia");
+        sort($firmad);
+
+        foreach($firmad as $firma){
+            echo $firma."<br>";
+        }
+
+        echo "<br>";
+
+        if(!empty($_GET['nimi'])){
+            $n = $_GET["nimi"];
+
+            if(in_array($n, $firmad)){
+                $index = array_search($n, $firmad);
+                unset($firmad[$index]);
+
+                foreach($firmad as $firma){
+                    echo $firma."<br>";
+            }
+        }
+        
+        
+        }
+        ?>
+
+        <h2>Riigid</h2>
+
+        <?php
+        $riigid = array("Indonesia","Canada","Kyrgyzstan","Germany","Philippines",
+        "Philippines","Canada","Philippines","South Sudan","Brazil",
+        "Democratic Republic of the Congo","Indonesia","Syria","Sweden",
+        "Philippines","Russia","China","Japan","Brazil","Sweden","Mexico","France",
+        "Kazakhstan","Cuba","Portugal","Czech Republic");
+
+        $pikim = "";
+
+        foreach($riigid as $riik){
+            if (strlen($riik) > strlen($pikim)){
+                $pikim = $riik;
+            }
+        }
+
+        echo "Pikim nimi: ".$pikim;
+        ?>
+
+        <h2>Hiina nimed</h2>
+
+        <?php
+        $hiina = array("瀚聪","月松","雨萌","展博","雪丽","哲恒","慧妍","博裕","宸瑜","奕漳",
+        "思宏","伟菘","彦歆","睿杰","尹智","琪煜","惠茜","晓晴","志宸","博豪",
+        "璟雯","崇杉","俊誉","军卿","辰华","娅楠","志宸","欣妍","明美");
+        sort($hiina);
+
+        echo "Esimene: ".$hiina[0]."<br>";
+        echo "Viimane: ".end($hiina)."<br>";
+        ?>
+
+        <h2>Google</h2>
+        <form action="#" method="get">
+            <label for="otsnimi">Firma nimi</label>
+            <input type="text" name="otsnimi" id="otsnimi"><br>
+            <input type="submit" class="btn btn-success my-2" value="Otsi nimi">
+        </form>
+
+        <?php
+        $gugu = array("Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiett","
+        Blackie","Stollenbeck","Houseago","Dugall","Sprowson","Kitley","Mcenamin",
+        "Allchin","Doghartie","Brierly","Pirrone","Fairnie","Seal","Scoffins",
+        "Galer","Matevosian","DeBlase","Cubbin","Izzett","Ebi","Clohisey",
+        "Prater","Probart","Samwaye","Concannon","MacLure","Eliet","Kundt","Reyes");
+
+        if(!empty($_GET['otsnimi'])){
+            $nim = $_GET["otsnimi"];
+
+            if (in_array($nim, $gugu)){
+                echo '<div class="alert alert-success" role="alert">';
+                echo "Nimi $nim on olemas!";
+                echo '</div>';
+            }
+            else{
+                echo '<div class="alert alert-danger" role="alert">';
+                echo "Nimi $nim pole olemas!";
+                echo '</div>';
+            }
+        }
+        ?>
+
+        <h2>Pildid</h2>
+
+        <?php
+        $pildid = array("https://www.metshein.com/wp-content/uploads/2016/06/devlin-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/freeland-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/gabriel-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/pete-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/peterus-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/prentice-150x150.jpg");
+
+        echo '<img src="$pildid[2]">;'
 
         ?>
 
