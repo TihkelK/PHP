@@ -15,7 +15,7 @@
         <h2>Genereeri</h2>
         <?php
         /*
-        // Ülesanne 1
+        // Ülesanne 6
         // Mihkel Kuusemäe
         // 07.02.24
         */
@@ -41,7 +41,7 @@
 
         <h2>Ruut</h2>
         <form action="#" method="get">
-            <label for="tarn">Firma nimi</label>
+            <label for="tarn">Tärnide arv</label>
             <input type="text" name="tarn" id="tarn"><br>
             <input type="submit" class="btn btn-success my-2" value="Tärnide arv">
         </form>
@@ -57,6 +57,56 @@
                 echo "<br>";
             }
         }
+        
+        
+        ?>
+
+        <h2>Kahanev</h2>
+
+        <?php
+        for ($i = 10; $i >= 1; $i--){
+            if ($i % 2 == 0){
+                echo $i . " ";
+            }
+        }
+
+        ?>
+
+        <h2>Kolmega jagunevad</h2>
+
+        <?php
+        for ($i = 1; $i <= 100; $i++){
+            if ($i % 3 == 0){
+                echo $i." ";
+            }
+        }
+        ?>
+
+        <h2>Massiivid ja tsüklid</h2>
+
+        <?php
+        $tydd = array("Aadu","Beedu","Ceedu");
+        $poii = array("Deedu","Eedu","Feedu");
+
+        foreach($tydd as $tyd){
+            echo $tyd." ";
+        }
+        echo "<br>";
+
+        foreach($poii as $poi){
+            echo $poi." ";
+        }
+        ?>
+
+        <h2>Massiivid ja tsüklid (Bonus)</h2>
+        
+        <?php
+        $suvtyd = $tydd;
+        $suvpoi = $poii;
+
+        shuffle($suvtyd);
+        shuffle($suvpoi);
+        echo $suvtyd[0]." - ".$suvpoi[0]."<br>";
 
         ?>
 

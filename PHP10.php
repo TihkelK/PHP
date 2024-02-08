@@ -6,34 +6,22 @@
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    
 </head>
 <body>
     <div class="container">
-        <h1>Harjutus 1</h1>   
+        <h1>Harjutus 10</h1>
 
         <?php
         /*
-        // Ülesanne 1
+        // Ülesanne 10
         // Mihkel Kuusemäe
-        // 01.02.24
+        // 08.02.24
         */
 
-        $nimi = "Mihkel";
-        $synniaasta = 2006;
-        $tahtkuju = "libra";
-
-        echo "Minu nimi on $nimi.<br>Sünniaasta - $synniaasta<br>Tähemärk - $tahtkuju <br><br>";
-
-        echo "\"It's My Life\" – Dr. Alban<br><br>";
-
-        echo "(\(\ <br>";
-        echo "( -.-) <br>";
-        echo "o_(\")(\") <br>";
-
-
-
+        
         ?>
+
 
     </div>
 

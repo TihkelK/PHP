@@ -17,7 +17,7 @@
         <h2>Tüdrukud</h2>
         <?php
         /*
-        // Ülesanne 1
+        // Ülesanne 5
         // Mihkel Kuusemäe
         // 05.02.24
         */

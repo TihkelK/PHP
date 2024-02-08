@@ -11,9 +11,9 @@
 
         <?php
         /*
-        // Ülesanne 1
+        // Ülesanne 2
         // Mihkel Kuusemäe
-        // 01.01.24
+        // 01.02.24
         */
 
         $m1 = 2;

@@ -29,7 +29,7 @@
 
         <?php
         /*
-        // Ülesanne 1
+        // Ülesanne 4
         // Mihkel Kuusemäe
         // 05.02.24
         */
