@@ -106,11 +106,11 @@
 
             if ($k11 == $k22){
                 echo "Ruut";
-                echo "<img src=\"https://lh3.googleusercontent.com/proxy/zW7z7ntNN_ZMi3_cYBx7UBz21G92Xf0DjyegWxDgU7jVReANd5KRMwOJi522vKwfp9jZLnNmSy5zVpZsSmvonSZ4TQvP_3Q\">";
+                echo "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/SquareDefinition.svg/1200px-SquareDefinition.svg.png\" width=\"300\" height=\"200\">";
             }
             else{
                 echo "Ristkülik";
-                echo "<img src=\"https://lh3.googleusercontent.com/proxy/KbwkIdnmAMPHRC1dnyiNZ47jxm9y5s8iUZWMbN4Mlk5kA5ttdO-WkMZ1RDhz5VIPGq1I-Twq7M9bt__rfDLPz09Bsjk9OsQ\">";
+                echo "<img src=\"https://o.quizlet.com/FjWeMlZ8cPMN1M8TZpJ6DQ.png\" width=\"300\" height=\"200\">";
             }
         }
         ?>
@@ -126,7 +126,7 @@
         if(!empty($_GET['aasta'])){
             $a = $_GET['aasta'];
             $hetkeaasta = date("Y");
-            if ($hetkeaasta-$a % 5 == 0){
+            if (($hetkeaasta - $a) % 5 == 0){
                 echo "juubel!<br>";
             } else {
                 echo "Ei ole juubel!<br>";

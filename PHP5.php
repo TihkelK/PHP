@@ -103,28 +103,21 @@
 
         <?php
         $firmad = array("Kimia","Mynte","Voomm","Twiyo","Layo","Talane","Gigashots","Tagchat","Quaxo","Voonyx","Kwilith","Edgepulse","Eidel","Eadel","Jaloo","Oyope","Jamia");
-        sort($firmad);
+        sort($firmad); 
+
+        if(!empty($_GET['nimi'])){
+            $n = $_GET["nimi"];
+        
+            if(in_array($n, $firmad)){
+                $index = array_search($n, $firmad);
+                unset($firmad[$index]);
+            }
+        }
 
         foreach($firmad as $firma){
             echo $firma."<br>";
         }
-
-        echo "<br>";
-
-        if(!empty($_GET['nimi'])){
-            $n = $_GET["nimi"];
-
-            if(in_array($n, $firmad)){
-                $index = array_search($n, $firmad);
-                unset($firmad[$index]);
-
-                foreach($firmad as $firma){
-                    echo $firma."<br>";
-            }
-        }
         
-        
-        }
         ?>
 
         <h2>Riigid</h2>
@@ -192,10 +185,26 @@
         <h2>Pildid</h2>
 
         <?php
-        $pildid = array("https://www.metshein.com/wp-content/uploads/2016/06/devlin-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/freeland-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/gabriel-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/pete-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/peterus-150x150.jpg","https://www.metshein.com/wp-content/uploads/2016/06/prentice-150x150.jpg");
-
-        echo '<img src="$pildid[2]">;'
-
+        $pildid = array(
+            "https://www.metshein.com/wp-content/uploads/2016/06/devlin-150x150.jpg",
+            "https://www.metshein.com/wp-content/uploads/2016/06/freeland-150x150.jpg",
+            "https://www.metshein.com/wp-content/uploads/2016/06/gabriel-150x150.jpg",
+            "https://www.metshein.com/wp-content/uploads/2016/06/pete-150x150.jpg",
+            "https://www.metshein.com/wp-content/uploads/2016/06/peterus-150x150.jpg",
+            "https://www.metshein.com/wp-content/uploads/2016/06/prentice-150x150.jpg"
+        );
+        
+        echo "<h2>Kolmas pilt massiivist</h2>";
+        echo '<img src="' . $pildid[2] . '" class="img-fluid" alt="Kolmas pilt">';
+        
+        echo "<h2>Kõik pildid massiivist</h2>";
+        echo '<div class="row">';
+        foreach ($pildid as $pilt) {
+            echo '<div class="col-md-2">';
+            echo '<img src="' . $pilt . '" class="img-fluid" alt="Pilt">';
+            echo '</div>';
+        }
+        echo '</div>';
         ?>
 
 

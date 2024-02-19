@@ -32,10 +32,12 @@
         <h2>Rida, Rida II</h2>
 
         <?php
-        $tarnid = array("*","*","*","*","*","*","*","*","*","*",);
-        echo "**********";
-        foreach($tarnid as $tarn){
-            echo $tarn."<br>";
+        for ($i = 0; $i < 10; $i++) {
+            echo "*";
+        }
+
+        for ($i = 0; $i < 10; $i++) {
+            echo "*<br>";
         }
         ?>
 
@@ -57,8 +59,6 @@
                 echo "<br>";
             }
         }
-        
-        
         ?>
 
         <h2>Kahanev</h2>

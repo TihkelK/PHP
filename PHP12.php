@@ -27,26 +27,29 @@
         // Mihkel Kuusemäe
         // 12.02.24
         */
-        if(!empty($_GET['start']) && !empty($_GET['lopp'])){
+        if (!empty($_GET['start']) && !empty($_GET['lopp'])){
             $s = $_GET["start"];
             $l = $_GET["lopp"];
-
-
+        
+            $start_time = strtotime($s);
+            $end_time = strtotime($l);
+        
+            if ($start_time === false || $end_time === false){
+                echo "Viga!";
+            }
+            else {
+                $time_diff = $end_time - $start_time;
+                if ($time_diff < 0){
+                    $time_diff += 24 * 3600;
+                }
+                $hours = floor($time_diff / 3600);
+                $minutes = floor(($time_diff % 3600) / 60);
+        
+                echo "Sõiduaeg: $hours tundi ja $minutes minutit.";
+            }
         }
-        if (empty($s) || empty($l)){
+        elseif (isset($_GET['start']) || isset($_GET['lopp'])){
             echo "Täida mõlemad väljad!";
-        }
-        else{
-            $ss = explode(":", $s);
-            $ll = explode(":", $l);
-            $sm = $ss[0] * 60 + $ss[1];
-            $lm = $ll[0] * 60 + $ll[1];
-
-            $tm = ($lm - $sm + 24 * 60) % (24 * 60);
-            $t = floor($tm / 60);
-            $m = $tm % 60;
-
-            echo "Sõiduaeg: $t tundi ja $m minutit.";
         }
         ?>
 

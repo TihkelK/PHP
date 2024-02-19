@@ -25,11 +25,11 @@
         $jag = $m1 / $m2;
         $jaak = $m1 % $m2;
         
-        echo "Liitmine = $sum tehe ($m1 + $m2)<br>";
-        echo "Lahutamine = $lah tehe ($m1 - $m2)<br>";
-        echo "Korrutamine = $kor tehe ($m1 * $m2)<br>";
-        echo "Jagamine = $jag tehe ($m1 / $m2)<br>";
-        echo "Jääk = $jaak tehe ($m1 % $m2)<br><br>";
+        echo "$m1 + $m2 = $sum<br>";
+        echo "$m1 - $m2 = $lah<br>";
+        echo "$m1 * $m2 = $kor<br>";
+        echo "$m1 / $m2 = $jag<br>";
+        echo "$m1 % $m2 = $jaak<br><br>";
         
         $mm = 100;
         $cm = $mm / 10;
