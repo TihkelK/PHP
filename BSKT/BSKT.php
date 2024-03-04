@@ -59,6 +59,12 @@
         </div>
     </nav>
 
+    <?php
+    $randomImages = ["img/b17.jpg", "img/b10.jpg", "img/b4.jpg", "img/b7.jpg", "img/b18.jpg"];
+    $randomTexts = ["osta 1 saad 1", "kõik rohelised", "joped meestele ja naistele", "ägedad kõrvarõngad", "kinkekottid juhhu"];
+    $randomImage = $randomImages[array_rand($randomImages)];
+    $randomText = $randomTexts[array_rand($randomTexts)];
+    ?>
     <div class="container">
         <div class="row">
 
@@ -94,6 +100,7 @@
             
         </div>
     </div>
+
     
     <br>
     <h1 class="text-center"><b>Parimad pakkumised</b></h1>

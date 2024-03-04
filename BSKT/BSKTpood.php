@@ -97,8 +97,11 @@
     
     <br>
     <h1 class="text-center"><b>POOD</b></h1>
+    <div class="container text-center">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis maiores cupiditate blanditiis accusantium est deleniti eos enim sit placeat! Amet facere eum dolore beatae maxime recusandae corporis reiciendis quam reprehenderit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae voluptate, quo mollitia dolore facere ab suscipit voluptatum ducimus beatae vero, eum maxime quasi tenetur consequuntur architecto accusantium doloribus! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempore qui eius vero aliquid eos quos asperiores impedit, commodi tenetur ea mollitia modi optio fugiat fugit dignissimos molestias adipisci earum?</p>
+    </div>
 
-
+        
   
     
 

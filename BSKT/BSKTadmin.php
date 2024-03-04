@@ -59,49 +59,79 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
+    <div class="container mt-5">
+        <h1 class="mb-4">ADMIN</h1>
+        
+        <button class="btn btn-success mb-3" onclick="addProduct()">Lisa toode</button>
+        <button class="btn btn-danger mb-3" onclick="removeProduct()">Eemalda toode</button>
 
-            <div class="col-md-6">
-                <div class="card border-1 banner1">
-
-                    <div class="card-img-overlay d-flex flex-column justify-content-center">
-                        <div>
-                            <p class="card-text text-white mb-0"><b>parim pakkumine</b></p>
-                            <h2 class="card-text text-white mb-0">osta 1 saad 1</h2>
-                            <p class="card-text text-white mb-0">The best classic dress is on sale at cora</p>
-                            <a href="#" class="btn btn-outline-light mt-3 rounded-0">Vaata lähemalt</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-
-            <div class="col-md-6">
-                <div class="card border-1 banner2">
-
-                    <div class="card-img-overlay d-flex flex-column justify-content-center">
-                        <div>
-                            <p class="card-text text-white mb-0"><b>kevad/suvi</b></p>
-                            <h2 class="card-text text-white mb-0">kõik rohelised</h2>
-                            <p class="card-text text-white mb-0">20% sootsamalt</p>
-                            <a href="#" class="btn btn-outline-light mt-3 rounded-0">Tutvu lähemalt</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+        <form id="addProductForm" action="#" method="get" style="display: none;">
+            <label for="productName">Toote nimi:</label>
+            <input type="text" name="productName" id="productName"><br>
+            <label for="productPrice">Hind:</label>
+            <input type="text" name="productPrice" id="productPrice"><br>
+            <label for="productImage">Pilt (URL):</label>
+            <input type="url" name="productImage" id="productImage"><br>
+            <input type="submit" class="btn btn-success my-2" value="Lisa">
+        </form>
+    
+        <form id="remProductForm" action="#" method="get" style="display: none;">
+            <label for="RproductName">Toote nimi:</label>
+            <input type="text" name="RproductName" id="RproductName"><br>
+            <label for="RproductPrice">Hind:</label>
+            <input type="text" name="RproductPrice" id="RproductPrice"><br>
+            <label for="RproductImage">Pilt (URL):</label>
+            <input type="url" name="RproductImage" id="RproductImage"><br>
+            <input type="submit" class="btn btn-danger my-2" value="Eemalda">
+        </form>
     </div>
-    
-    <br>
-    <h1 class="text-center"><b>ADMIN</b></h1>
 
+    <script>
+        function addProduct() {
+            document.getElementById('addProductForm').style.display = 'block';
+        }
+        function removeProduct() {
+            document.getElementById('remProductForm').style.display = 'block';
+        }
+    </script>
 
-  
-    
+<?php
+if(!empty($_GET['productName']) && !empty($_GET['productPrice']) && !empty($_GET['productImage'])){
+    $productName = $_GET['productName'];
+    $productPrice = $_GET['productPrice'];
+    $productImage = $_GET['productImage'];
 
+    $fail = "tooted.csv";
+    $data = "$productImage,$productName,$productPrice\n";
+
+    if ($handle = fopen($fail, 'a')){
+        fwrite($handle, $data);
+        fclose($handle);
+        echo "<script>alert('Toode lisatud!');</script>";
+    }
+}
+
+if(!empty($_GET['RproductName']) && !empty($_GET['RproductPrice']) && !empty($_GET['RproductImage'])){
+    $RproductName = $_GET['RproductName'];
+    $RproductPrice = $_GET['RproductPrice'];
+    $RproductImage = $_GET['RproductImage'];
+
+    $fail = "tooted.csv";
+    $rows = file($fail);
+    $handle = fopen($fail, 'w');
+
+    foreach($rows as $row){
+        $data = explode(',', $row);
+        if ($data[0] == $RproductImage && $data[1] == $RproductName && $data[2] == $RproductPrice) {
+
+        } else {
+            fwrite($handle, $row);
+        }
+    }
+    fclose($handle);
+    echo "<script>alert('Toode eemaldatud!');</script>";
+}
+?>
 
         <script>
             (function() {

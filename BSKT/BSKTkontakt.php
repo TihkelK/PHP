@@ -97,9 +97,89 @@
     
     <br>
     <h1 class="text-center"><b>KONTAKT</b></h1>
+    
+    <div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Pilt</th>
+            <th scope="col">Nimi</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>
+                <img class="rounded-circle" src="https://picsum.photos/id/684/50/50" alt="">
+            </td>
+            <td>Heli Kopter</td>
+            <td>heli@kopter.ee</td>
+            <td>
+                <button type="button" class="btn btn-warning">Muuda</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger">Kustuta</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>
+                <img class="rounded-circle" src="https://picsum.photos/id/684/50/50" alt="">
+            </td>
+            <td>Anna Nuga</td>
+            <td>anna@nuga.com</td>
+            <td>
+                <button type="button" class="btn btn-warning">Muuda</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger">Kustuta</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>
+                <img class="rounded-circle" src="https://picsum.photos/id/684/50/50" alt="">
+            </td>
+            <td>Imre Tard</td>
+            <td>imre@tard.eu</td>
+            <td>
+                <button type="button" class="btn btn-warning">Muuda</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger">Kustuta</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>
+                <img class="rounded-circle" src="https://picsum.photos/id/684/50/50" alt="">
+            </td>
+            <td>Karin Eegreid</td>
+            <td>karin@eegreid.eu</td>
+            <td>
+                <button type="button" class="btn btn-warning">Muuda</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger">Kustuta</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
-
-  
+    <nav>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Eelmine</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item active"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Järgmine</a></li>
+        </ul>
+      </nav>
+      </div>
     
 
 
