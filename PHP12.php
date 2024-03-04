@@ -16,7 +16,7 @@
         
         <form action="#" method="get">
             <label for="start">Stardi aeg (hh:mm):</label>
-            <input type="text" name="start" id="start"><br>
+            <input type="time" name="start" id="start"><br>
             <label for="lopp">Lopp aeg (hh:mm):</label>
             <input type="text" name="lopp" id="lopp"><br>
             <input type="submit" class="btn btn-success my-2" value="Arvuta">
