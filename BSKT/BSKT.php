@@ -9,14 +9,14 @@
 
     <style>
         .banner1 {
-            background-image: url("img/b17.jpg");
             height: 300px;
             object-fit: cover;
+            background-position: center;
         }
         .banner2 {
-            background-image: url("img/b10.jpg");
             height: 300px;
             object-fit: cover;
+            background-position: center;
         }
     </style>
 
@@ -60,22 +60,32 @@
     </nav>
 
     <?php
-    $randomImages = ["img/b17.jpg", "img/b10.jpg", "img/b4.jpg", "img/b7.jpg", "img/b18.jpg"];
-    $randomTexts = ["osta 1 saad 1", "kõik rohelised", "joped meestele ja naistele", "ägedad kõrvarõngad", "kinkekottid juhhu"];
-    $randomImage = $randomImages[array_rand($randomImages)];
-    $randomText = $randomTexts[array_rand($randomTexts)];
+    $rndmImages = ["img/b17.jpg", "img/b10.jpg", "img/b4.jpg", "img/b7.jpg", "img/b18.jpg"];
+    $rndmTexts = ["<p class=\"card-text text-light mb-0\"><b>parim pakkumine</b></p>
+    <h2 class=\"card-text text-light mb-0\">osta 1 saad 1</h2>
+    <p class=\"card-text text-light mb-0\">The best classic dress is on sale at cora</p>", "<p class=\"card-text text-light mb-0\"><b>kevad/suvi</b></p>
+    <h2 class=\"card-text text-light mb-0\">kõik rohelised</h2>
+    <p class=\"card-text text-light mb-0\">20% sootsamalt</p>", "<p class=\"card-text text-light mb-0\"><b>sügis/talv</b></p>
+    <h2 class=\"card-text text-light mb-0\">joped meestele ja naistele</h2>
+    <p class=\"card-text text-light mb-0\">30% sootsamalt</p>", "<p class=\"card-text text-light mb-0\"><b>KÕRVARÕNGAD</b></p>
+    <h2 class=\"card-text text-light mb-0\">ägedad kõrvarõngad</h2>
+    <p class=\"card-text text-light mb-0\">Need on ilusad(vist)</p>", "<p class=\"card-text text-light mb-0\"><b>osta 2 saad 10</b></p>
+    <h2 class=\"card-text text-light mb-0\">kinkekottid juhhu</h2>
+    <p class=\"card-text text-light mb-0\">Neid on erinevaid värve</p>"];
+    $rndmImage = $rndmImages[array_rand($rndmImages)];
+    $rndmImage2 = $rndmImages[array_rand($rndmImages)];
+    $rndmText = $rndmTexts[array_rand($rndmTexts)];
+    $rndmText2 = $rndmTexts[array_rand($rndmTexts)];
     ?>
     <div class="container">
         <div class="row">
 
             <div class="col-md-6">
-                <div class="card border-1 banner1">
+                <div class="card border-1 banner1" style="background-image: url('<?php echo $rndmImage; ?>');">
 
                     <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <div>
-                            <p class="card-text text-white mb-0"><b>parim pakkumine</b></p>
-                            <h2 class="card-text text-white mb-0">osta 1 saad 1</h2>
-                            <p class="card-text text-white mb-0">The best classic dress is on sale at cora</p>
+                            <?php echo $rndmText; ?>
                             <a href="#" class="btn btn-outline-light mt-3 rounded-0">Vaata lähemalt</a>
                         </div>
                     </div>
@@ -85,13 +95,11 @@
             
 
             <div class="col-md-6">
-                <div class="card border-1 banner2">
+                <div class="card border-1 banner2" style="background-image: url('<?php echo $rndmImage2; ?>');">
 
                     <div class="card-img-overlay d-flex flex-column justify-content-center">
                         <div>
-                            <p class="card-text text-white mb-0"><b>kevad/suvi</b></p>
-                            <h2 class="card-text text-white mb-0">kõik rohelised</h2>
-                            <p class="card-text text-white mb-0">20% sootsamalt</p>
+                            <?php echo $rndmText2; ?>
                             <a href="#" class="btn btn-outline-light mt-3 rounded-0">Tutvu lähemalt</a>
                         </div>
                     </div>
