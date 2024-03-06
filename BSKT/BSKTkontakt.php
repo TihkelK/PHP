@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="minuMenyy">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="BSKT.php"><b>Avaleht</b></a>
+                        <a class="nav-link" href="index.php"><b>Avaleht</b></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="BSKTpood.php"><b>Pood</b></a>
