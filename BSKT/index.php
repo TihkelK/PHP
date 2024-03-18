@@ -58,7 +58,7 @@
             </div>
         </div>
     </nav>
-
+        
     <?php
     $rndmImages = ["img/b17.jpg", "img/b10.jpg", "img/b4.jpg", "img/b7.jpg", "img/b18.jpg"];
     $rndmTexts = ["<p class=\"card-text text-light mb-0\"><b>parim pakkumine</b></p>
@@ -115,29 +115,30 @@
 
     <div class="container mt-5">
         <div class="row">
-            <?php
-            $fail = "tooted.csv";
+        <?php
+$fail = "tooted.csv";
 
-            if (($handle = fopen($fail, 'r')) !== FALSE) {
-                while (($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
-                    $pilt = $data[0];
-                    $nimetus = $data[1];
-                    $hind = $data[2];
+if (($handle = fopen($fail, 'r')) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+        $pilt = "img/" . $data[0];
+        $nimetus = $data[1];
+        $hind = $data[2];
 
-                    echo '
-                    <div class="col-md-3 mb-4">
-                        <div class="card border-1 p-2">
-                            <img src="' . $pilt . '" class="card-img-top rounded-3" alt="' . $nimetus . '">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0"><b>' . $nimetus . '</b></h5>
-                                <p class="card-text text-success"><b>' . $hind . '€</b></p>
-                            </div>
-                        </div>
-                    </div>';
-                }
-                fclose($handle);
-            }
-            ?>
+        echo '
+        <div class="col-md-3 mb-4">
+            <div class="card border-1 p-2">
+                <img src="' . $pilt . '" class="card-img-top rounded-3" alt="' . $nimetus . '">
+                <div class="card-body">
+                    <h5 class="card-title mb-0"><b>' . $nimetus . '</b></h5>
+                    <p class="card-text text-success"><b>' . $hind . '€</b></p>
+                </div>
+            </div>
+        </div>';
+    }
+    fclose($handle);
+}
+?>
+
 
         </div>
     </div>
